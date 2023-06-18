@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Today's Date</title>
+    <script type="module" src="index.js" defer></script>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body class="dark:bg-secondary bg-white overflow-hidden" cz-shortcut-listen="true" seventv-kick="true">
+    <div class="slider">
+        <input id="slider" type="range" id="volume" name="volume" min="0" max="11">
+        <span>CHAT SPEED</span>
+    </div>
+
+    <div id="app" data-v-app="">
+        <div class="relative z-[100]">
+            <div class="fixed z-[100] block whitespace-nowrap rounded bg-white px-1 py-0.5 text-xs font-bold text-black"
+                style="visibility: hidden; top: -100px; left: -100px;"></div>
+            <div class="fixed z-[100] block -translate-x-1/2 border-4 border-transparent border-t-white opacity-100"
+                style="visibility: hidden; top: -100px; left: -100px;"></div>
+        </div>
+        <div class="main-html flex h-screen w-screen flex-col overflow-hidden">
+            <div class="relative grow overflow-hidden">
+                <div class="flex h-full w-full flex-col overflow-hidden">
+                    <div class="flex grow overflow-hidden">
+                        <div class="relative h-full w-full grow overflow-hidden border-l border-secondary-lighter">
+                            <div class="absolute-center -z-10">
+                                <div class="spinner spinner-sm"></div>
+                            </div>
+                            <div id="main-view"
+                                class="relatize z-10 h-full overflow-y-auto overflow-x-hidden bg-gray-900">
+                                <div id="chatroom" class="flex h-full max-h-full flex-col">
+                                    <div id="chatroom-top" class="flex flex-col">
+                                        <div class="flex h-11 flex-row items-center justify-between border-b-2 border-b-secondary-lighter px-3.5"
+                                            channel-slug="xqc">
+                                            <div class="opacity-0">
+                                                <div style="width: 16px; height: 16px;"><svg width="16" height="16"
+                                                        viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M12.5994 9.16639L11.5258 10.24L12.7608 11.4706L15.9946 8.23684L12.7608 5.00305L11.5258 6.23372L12.7085 7.42075H1.99463V9.16639H12.5994Z"
+                                                            fill="currentColor"></path>
+                                                        <path d="M10.7399 11.7282H2.01168V13.4738H10.7399V11.7282Z"
+                                                            fill="currentColor"></path>
+                                                        <path d="M10.7399 3H2.01168V4.74564H10.7399V3Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></div>
+                                            </div>
+                                            <div class="flex flex-row items-center text-center"><span
+                                                    class="text-base font-bold">Chat</span></div>
+                                            <div class="w-4 bg-transparent"></div>
+                                        </div>
+                                        <div data-v-be5e9d85="" class="relative">
+                                        </div>
+                                    </div>
+                                    <div class="relative flex grow flex-col overflow-hidden">
+                                        <div id="chatfeed" class="overflow-y-scroll py-3">
+                                            <div class="mt-0.5">
+                                                <div class="chat-entry">
+
+                                                    <div>
+
+                                                        <span data-v-bb151e01="" class="chat-message-identity"><span
+                                                                data-v-bb151e01=""
+                                                                class="inline-flex translate-y-[3px]"></span>
+                                                            <seventv-container>
+
+                                                            </seventv-container><span data-v-b433ad78=""
+                                                                data-v-bb151e01="" class="chat-entry-username"
+                                                                data-chat-entry-user="aditya001"
+                                                                data-chat-entry-user-id="155042"
+                                                                style="color: rgb(186, 254, 163);">Aditya001</span>
+                                                        </span><span class="font-bold text-white">: </span><span
+                                                            data-v-89ba08de="">
+                                                            <div data-v-31c262c8="" data-v-89ba08de=""
+                                                                class="chat-emote-container">
+                                                                <div data-v-31c262c8="" class="relative"><img
+                                                                        data-v-31c262c8="" data-emote-name="xqcL"
+                                                                        data-emote-id="1082636"
+                                                                        src="https://files.kick.com/emotes/1082636/fullsize"
+                                                                        alt="xqcL" class="chat-emote"></div>
+                                                            </div>
+                                                        </span>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-v-c2552972="" id="chatroom-footer" class="chatroom-footer">
+                                        <div data-v-2046400c="" data-v-c2552972=""
+                                            class="relative flex flex-col gap-2.5">
+                                            <div data-v-2046400c="" class="chat-mode text-mode">
+                                                <div data-v-2046400c="" class="chat-message-row">
+                                                    <div data-v-2046400c="" class="my-auto ml-1.5 cursor-pointer">
+                                                    </div>
+                                                    <div data-v-2046400c="" class="chat-input-container">
+                                                        <div data-v-2046400c="" class="chat-input-wrapper">
+                                                            <div data-v-2046400c="" id="message-input"
+                                                                contenteditable="true"
+                                                                data-placeholder="Envoyer un message" class="chat-input"
+                                                                spellcheck="false"></div>
+                                                        </div>
+                                                    </div>
+                                                    <seventv-container><button data-v-21b9153f=""
+                                                            class="seventv-emote-menu-button"><svg data-v-21b9153f=""
+                                                                width="1em" height="1em" fill="currentColor"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 33 23.551" provider="7TV" class="icon">
+                                                                <path
+                                                                    d="M2.383,0,0,4.127,1.473,6.676H11.7L3.426,21,4.9,23.551H9.66Q14.532,15.113,19.4,6.676L15.549,0ZM18.492,0l3.856,6.676h2.945l2.381-4.125L26.2,0Zm2.383,9.225L17.021,15.9l4.417,7.649H26.2L33,11.775l-1.473-2.55H26.764l-2.944,5.1Z">
+                                                                </path>
+                                                            </svg></button></seventv-container>
+                                                    <div data-v-2d4fb274="" data-v-2046400c="" class="relative my-auto">
+                                                        <button data-v-c433a6dd="" data-v-2d4fb274="" type="button"
+                                                            class="variant-text size-md">
+                                                            <div data-v-c433a6dd="" class="icon"
+                                                                style="width: 20px; height: 20px;"><svg width="20"
+                                                                    height="20" viewBox="0 0 16 16" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M11 2H5L2 5V11L5 14H11L14 11V5L11 2ZM10.25 5C10.8725 5 11.375 5.5025 11.375 6.125C11.375 6.7475 10.8725 7.25 10.25 7.25C9.6275 7.25 9.125 6.7475 9.125 6.125C9.125 5.5025 9.6275 5 10.25 5ZM5.75 5C6.3725 5 6.875 5.5025 6.875 6.125C6.875 6.7475 6.3725 7.25 5.75 7.25C5.1275 7.25 4.625 6.7475 4.625 6.125C4.625 5.5025 5.1275 5 5.75 5ZM11.75 9.875C11.0188 10.6062 10.6062 11.0188 9.875 11.75H6.125C5.39375 11.0188 4.98125 10.6062 4.25 9.875V8.75H11.75V9.875Z"
+                                                                        fill="currentColor"></path>
+                                                                </svg></div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-v-2046400c="" class="send-row">
+                                                <div data-v-2046400c="" class="relative"><button data-v-c433a6dd=""
+                                                        data-v-2046400c="" type="button" class="variant-text size-md">
+                                                        <div data-v-c433a6dd="" class="icon"
+                                                            style="width: 20px; height: 20px;"><svg width="20"
+                                                                height="20" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M12.8191 7.99813C12.8191 7.64949 12.7816 7.30834 12.7104 6.97844L13.8913 6.29616L12.3918 3.69822L11.2071 4.38051C10.7048 3.9269 10.105 3.57076 9.44517 3.35708V2H6.44611V3.36082C5.78632 3.57451 5.19025 3.9269 4.68416 4.38426L3.49953 3.70197L2 6.29616L3.18088 6.97844C3.10965 7.30834 3.07217 7.64949 3.07217 7.99813C3.07217 8.34677 3.10965 8.68791 3.18088 9.01781L2 9.70009L3.49953 12.298L4.68416 11.6157C5.1865 12.0694 5.78632 12.4255 6.44611 12.6392V14H9.44517V12.6392C10.105 12.4255 10.701 12.0731 11.2071 11.6157L12.3918 12.298L13.8913 9.70009L12.7104 9.01781C12.7816 8.68791 12.8191 8.34677 12.8191 7.99813ZM9.82006 9.87254H6.07123V6.12371H9.82006V9.87254Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg></div>
+                                                    </button></div><button data-v-80dcaa82="" data-v-2046400c=""
+                                                    class="variant-action size-md" disabled="">
+                                                    <div data-v-80dcaa82="" class="button-content">
+                                                        <div data-v-80dcaa82="" class="inner-label">Chat</div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div data-v-dd95d5e4=""
+            class="fixed inset-x-0 bottom-0 z-[200] flex flex-col items-center gap-4 rounded-large bg-secondary-light px-4 pb-4 pt-14"
+            style="display: none;">
+            <div data-v-dd95d5e4="" class="absolute -top-10 z-[201] h-20 w-20 overflow-hidden rounded-large"><img
+                    data-v-dd95d5e4=""
+                    src="data:image/webp;base64,UklGRgAEAABXRUJQVlA4WAoAAAAIAAAA5QAA5QAAVlA4IHwDAADQIgCdASrmAOYAPpVAkkkkIgmPnCIEonpbuF1UQgZH8i1oLl/5W8PTI6dj8If5n7ufeT/d/ZT5gH6K/qB1s/MB/H/8V+2nvE/439Vfc36AH9m8532LvQP8uD2a/3E/Z32gNVs8s/yIwTtVRzKW66Z/77LxrpS3Om503Om503Om503OmgsYKQVlMeljt5B44K8siNs5Ydl4XivrTVkW/qdGcf4DllU3NnzZfYSYoAAT0uvRSq3NnzbOAoWB4vdmndKSLEjSr/DQe0hcRznTPcqOLrQ9gmo8er1Yy5SlF/g1P/Ko9c+Sa8a02ZrTpRGXrpKDUQIluaxJj53wHD1VugVuL/Kau/skQsvGulPLf5ZzpudNzpudNzpudNzpudM8AAD+2MAAABQ1dwhqklBFtJ1hSH2wyw+LvQtahBtg2bySrhEDmMU2cCYXNPGHy3IPK4erX7pX2cO12XjzDgmBILmaSm3kHUZVNTmNRZQsRTn+FRI3Ff+5n5kKWDrpg/KYKLWHrK+mHUVf8Orfe25U6zp/XPdh52c+EKw43YhrmssBdO3N713I01U5PSOXHv1QB6BED92QVCfCPYFlCTrjFjQ+dFmmz46X6OY6O68afGpzlozfxCPXHBT5SHR2xElpnzOC0L9jiU81O7zQkFrBB0JUGAMVJ9+NZE0+0DTR0vkTTxuUuNoU4sgDt2RGdpPPPFZnPkoSzv350PoOYQRkmsd2BGjTe+bX3+pEpiGXXk14LvH+enrrt5XVqZi7CdVGvueqWD+fPGFteWKmITTyu/TQOo+15pAdDbdpzJ4C0+ADfjR2Z3mUN+eos6exNbud+bEfpPTlEI9IbhTNWLCpqcGVxM2yK33KxYUB5Kzsu37AXbJKc3+azjS4e7RwKhL/+L3VzsOTqo4W/u7obeM04i22fHLdJnBv4ESUjXIB/HEbCYYtezSz2NHCNYM1ZVQN8QnfGZDVTVa16oLuybtiOf+A9rx0KpZ/uO1kTgH9dPiiOYFrmmg/Mg3OoLjJveTBiKkyFKcxq4xl9HdE3hVyu3LoJl5YHWqbZqXJdmMghotRf9T8SID4oLdFw0AxCAfe+7jyaMBn7tNJSjnVUz/yTrZ5Y/rSmYMwYYcAvls7PhsBoXALl/x3giBNW8B70hB+89sBLEz7PkSuuOZem3yMeLLKaO+n4XQAAAAAAAAARVhJRl4AAABJSSoACAAAAAEAaYcEAAEAAAAaAAAAAAAAAAEAhpIHADIAAAAsAAAAAAAAAEFTQ0lJAAAAMS41LjEtMjNELUNTN1RIUFdJSEFUVFJHQVNVRVY0Q1JXUUNJLjAuMi0w">
+            </div><span data-v-dd95d5e4="" class="font-bold">Obtenez une expérience maximale sur
+                l'application</span><button data-v-80dcaa82="" data-v-dd95d5e4=""
+                class="variant-action size-md button-block">
+                <div data-v-80dcaa82="" class="button-content">
+
+                    <div data-v-80dcaa82="" class="inner-label">Télécharger l'application</div>
+
+
+                </div>
+
+            </button><button data-v-80dcaa82="" data-v-dd95d5e4="" class="variant-text size-md button-block">
+                <div data-v-80dcaa82="" class="button-content">
+
+                    <div data-v-80dcaa82="" class="inner-label">Pas maintenant</div>
+
+
+                </div>
+
+            </button>
+        </div>
+
+
+        <div class="fixed inset-0 flex bg-transparent -z-[100]">
+            <div id="theaterModeVideoHolder" class="flex h-screen w-full shrink grow items-center justify-center"></div>
+            <div class="relative flex h-screen bg-transparent">
+
+                <div id="theaterModeChatHolder" class="transition-all duration-300 w-[340px]"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
