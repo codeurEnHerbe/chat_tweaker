@@ -48,11 +48,6 @@ let iteration = 0;
 
 
 function main() {
-    if (iteration > 500) {
-        return;
-    }
-
-
     let indexRandomMess = Math.floor(Math.random() * data.messages.length)
     messageBuffer.push(indexRandomMess)
 
