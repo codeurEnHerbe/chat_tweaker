@@ -2282,13 +2282,14 @@ body[seventv-kick="true"] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color: white;
+    background-color: #22292b;
 }
 
 .slider {
     display: flex;
     flex-direction: column;
     margin-right: 40px;
-    color: black;
 }
 
 .buffer-size-container {
@@ -2301,17 +2302,12 @@ body[seventv-kick="true"] {
 }
 
 .buffer-count {
-    color: black;
 }
 
 .dm-container {
     margin-right: 15px;
     display: flex;
     flex-direction: row;
-}
-
-.dm {
-    color: black;
 }
 
 .dm-img {
