@@ -22,7 +22,7 @@ slider_messages.addEventListener('input', function () {
 
 slider_blocks.addEventListener('input', function () {
     block_speed = map(slider_blocks.value, [0, 10], [50, 800])
-    console.log(block_speed)
+    block_speed = 800 - block_speed
     block_rate.innerHTML = block_speed == 0 ? "< 100 ms." : block_speed + " ms."
 }, false);
 
