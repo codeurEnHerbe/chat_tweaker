@@ -2280,13 +2280,42 @@ body[seventv-kick="true"] {
 .controls-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .slider {
+    display: flex;
+    flex-direction: column;
     margin-right: 40px;
     color: black;
 }
 
+.buffer-size-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#buffer-count {
+    margin-left: 5px;
+}
+
 .buffer-count {
     color: black;
+}
+
+.dm-container {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dm {
+    color: black;
+}
+
+.dm-img {
+    margin-left: 3px;
+    width: 28px;
+    height: 28px;
 }
