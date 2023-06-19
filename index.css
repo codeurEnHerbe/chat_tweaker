@@ -2277,6 +2277,16 @@ body[seventv-kick="true"] {
     background-color: rgb(36 39 44);
 }
 
+.controls-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .slider {
+    margin-right: 40px;
+    color: black;
+}
+
+.buffer-count {
     color: black;
 }

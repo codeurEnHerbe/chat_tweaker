@@ -9,9 +9,17 @@
 </head>
 
 <body class="dark:bg-secondary bg-white overflow-hidden" cz-shortcut-listen="true" seventv-kick="true">
-    <div class="slider">
-        <input id="slider" type="range" id="volume" name="volume" min="0" max="11">
-        <span>CHAT SPEED</span>
+    <div class="controls-container">
+        <div class="slider">
+            <span>CHAT SPEED</span>
+            <input id="slider-messages" type="range" id="volume" name="volume" min="0" max="10">
+        </div>
+        <div class="slider">
+            <span>BLOCKS SPEED</span>
+            <input id="slider-blocks" type="range" id="volume" name="volume" min="0" max="10">
+        </div>
+        <span class="buffer-count">Messages buffer: </span>
+        <span id="buffer-count" class="buffer-count">0</span>
     </div>
 
     <div id="app" data-v-app="">
