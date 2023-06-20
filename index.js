@@ -9,14 +9,14 @@ let buffer_count = document.getElementById('buffer-count');
 let block_rate = document.getElementById('block-rate');
 let message_rate = document.getElementById('message-rate');
 
-let maxInt = 1000
+let message_speed = 1000
 let block_speed = 500
 let messageBuffer = []
 
 
 slider_messages.addEventListener('input', function () {
-    maxInt = (10 - slider_messages.value) * 100
-    message_rate.innerHTML = maxInt == 0 ? "< 100 ms." : maxInt + " ms."
+    message_speed = (10 - slider_messages.value) * 100
+    message_rate.innerHTML = message_speed == 0 ? "< 100 ms." : message_speed + " ms."
 }, false);
 
 
@@ -47,18 +47,12 @@ function buildNewMessage(message) {
     buffer_count.innerHTML = messageBuffer.length
 }
 
-
-let iteration = 0;
-
-
 function main() {
     let indexRandomMess = Math.floor(Math.random() * data.messages.length)
     messageBuffer.push(indexRandomMess)
 
-    updateScroll()
-    let interval = Math.floor(Math.random() * (maxInt - 50 + 1) + 50)
+    let interval = Math.floor(Math.random() * (message_speed - 50 + 1) + 50)
     setTimeout(main, interval);
-    iteration++
 }
 
 function flushArray() {
@@ -66,6 +60,8 @@ function flushArray() {
     messageBuffer.forEach(messageIndex => {
         buildNewMessage(data.messages[messageIndex])
     })
+
+    updateScroll()
 
     messageBuffer = []
     setTimeout(flushArray, block_speed);
